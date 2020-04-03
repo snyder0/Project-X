@@ -3,7 +3,7 @@ import {
   createStyles,
   makeStyles,
   // eslint-disable-next-line no-unused-vars
-  Theme
+  Theme,
 } from "@material-ui/core/styles";
 import { useHistory } from "react-router-dom";
 import AppBar from "@material-ui/core/AppBar";
@@ -18,14 +18,14 @@ import Menu from "@material-ui/core/Menu";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1
+      flexGrow: 1,
     },
     menuButton: {
-      marginRight: theme.spacing(2)
+      marginRight: theme.spacing(2),
     },
     title: {
-      flexGrow: 1
-    }
+      flexGrow: 1,
+    },
   })
 );
 
@@ -35,7 +35,7 @@ export default function Navbar() {
   const [auth, setAuth] = React.useState(true);
   const [
     anchorEl,
-    setAnchorEl
+    setAnchorEl,
   ] = React.useState<null | HTMLElement>(null);
   const isMenuOpen = Boolean(anchorEl);
 
@@ -55,11 +55,11 @@ export default function Navbar() {
       anchorEl={anchorEl}
       anchorOrigin={{
         vertical: "top",
-        horizontal: "right"
+        horizontal: "right",
       }}
       transformOrigin={{
         vertical: "top",
-        horizontal: "left"
+        horizontal: "left",
       }}
       keepMounted
       open={isMenuOpen}

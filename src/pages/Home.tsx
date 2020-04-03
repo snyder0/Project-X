@@ -2,10 +2,11 @@ import React, { Fragment } from "react";
 import {
   Theme,
   createStyles,
-  makeStyles
+  makeStyles,
 } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
+import Counter from "../components/counter";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -15,9 +16,9 @@ const useStyles = makeStyles((theme: Theme) =>
       "& > *": {
         margin: theme.spacing(1),
         width: theme.spacing(58),
-        height: theme.spacing(25)
-      }
-    }
+        height: theme.spacing(25),
+      },
+    },
   })
 );
 
@@ -27,7 +28,7 @@ const Home: React.FC = () => {
     <div className={classes.root}>
       <Paper elevation={3}>
         <h2>Daily Challenges</h2>
-        <p>Home</p>
+        <Counter />
       </Paper>
       <Paper elevation={3}>
         <h2>Leaderboard</h2>
